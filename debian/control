@@ -1,0 +1,34 @@
+Source: libb-hooks-endofscope-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Jose Luis Rivas <ghostbar38@gmail.com>,
+           Antonio Radici <antonio@dyne.org>,
+           gregor herrmann <gregoa@debian.org>,
+           Fabrizio Regalli <fabreg@fabreg.it>,
+           Florian Schlichting <fsfs@debian.org>
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 8)
+Build-Depends-Indep: perl,
+                     libmodule-implementation-perl,
+                     libmodule-runtime-perl (>= 0.012),
+                     libsub-exporter-progressive-perl,
+                     libvariable-magic-perl (>= 0.48)
+Standards-Version: 3.9.5
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-perl/packages/libb-hooks-endofscope-perl.git
+Vcs-Git: git://anonscm.debian.org/pkg-perl/packages/libb-hooks-endofscope-perl.git
+Homepage: https://metacpan.org/release/B-Hooks-EndOfScope/
+
+Package: libb-hooks-endofscope-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libmodule-implementation-perl,
+         libmodule-runtime-perl (>= 0.012),
+         libsub-exporter-progressive-perl,
+         libvariable-magic-perl (>= 0.48)
+Description: module for executing code after a scope finished compilation
+ B::Hooks::EndOfScope allows you to execute code when perl finished
+ compiling the surrounding scope. It exports a single function,
+ 'on_scope_end $codeblock', which can be used e.g. for introspection in
+ the constructor of your class.
+
